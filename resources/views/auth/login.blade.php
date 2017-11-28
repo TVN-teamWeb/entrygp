@@ -1,23 +1,15 @@
-@extends('layouts.app')
+@extends('main')
+
+@section('titolo') Login @endsection
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+
+
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+
+              <br/>
                 <div class="panel-body">
-                    @if (session('confirmation-success'))
-                        <div class="alert alert-success">
-                            {{ session('confirmation-success') }}
-                        </div>
-                    @endif
-                    @if (session('confirmation-danger'))
-                        <div class="alert alert-danger">
-                            {!! session('confirmation-danger') !!}
-                        </div>
-                    @endif
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -64,25 +56,18 @@
                                     Login
                                 </button>
 
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?
+                                </a>
+
+                                <a class="btn btn-link" href="{{ route('register') }}">
+                                    Register
                                 </a>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-        </div>
-        @if (session('confirmation-success'))
-    <div class="alert alert-success">
-        {{ session('confirmation-success') }}
-    </div>
-@endif
-@if (session('confirmation-danger'))
-    <div class="alert alert-danger">
-        {!! session('confirmation-danger') !!}
-    </div>
-@endif
-    </div>
-</div>
+
+
 @endsection
