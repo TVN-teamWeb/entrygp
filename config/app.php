@@ -163,11 +163,13 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Bestmomo\LaravelEmailConfirmation\ServiceProvider::class,
+
 
         /*
          * Package Service Providers...
          */
+        Bestmomo\LaravelEmailConfirmation\ServiceProvider::class,
+        Monarobase\CountryList\CountryListServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -226,7 +228,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Countries' => Monarobase\CountryList\CountryListFacade::class,
     ],
 
 ];
