@@ -4,3 +4,42 @@ main h1 { margin-top: 14px; }
 
 header a { color: #ddd; text-decoration: none; }
 header a:hover { color: #fff; text-decoration: none; }
+
+label.title{font-size: 1.3em; text-transform: uppercase;}
+label.padre-check{
+  font-weight: bold;
+}
+
+.fa-stack{cursor: pointer;}
+.fa-stack-2x {
+    font-size: 1.3em;
+}
+
+.fa-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 6px;
+    text-align: center;
+}
+
+.fa-stack-1x {
+    line-height: inherit;
+    position: relative;
+    top: -5px;
+}
+
+i.fa.fa-plus.fa-stack-1x.fa-inverse{
+  font-size: 20px;
+}
+
+b.title{
+  cursor: pointer;
+}
+
+label, label.form-control-label{
+  margin-bottom: 0px;
+}
+.col-lg-6{
+  margin-bottom: 15px;
+}
